@@ -21,6 +21,8 @@ Ensure you read the following instructions carefully:
    3) 8 -> factors(1,2,4) -> sum(1+2+4) = 7 < 8 (Deficient)
    ```
 
+   
+  ```js
    function analyze(n) {
   let factorSum = 0;
   for (let i = 1; i < n; i++) {
@@ -28,19 +30,18 @@ Ensure you read the following instructions carefully:
       factorSum += i;
     }
   }
-
   if (factorSum === n) {
-    return "Number is perfect.";
+    return "Perfect";
   } else if (factorSum > n) {
-    return "Number is abundant.";
+    return "Abundant";
   } else {
-    return "Number is deficient.";
+    return "Deficient";
   }
 }
 
 const input = 45;
 console.log(analyze(input));
-
+```
 
 2. Shorten me!
 
@@ -75,6 +76,8 @@ console.log(analyze(input));
    We got to 1 in 9 steps. So for input x = 12, the return value would be 9.
    ```
 
+   
+ ```js
    function countStepsToReachOne(startingNumber) {
   let stepsCount = 0;
   while (startingNumber !== 1) {
@@ -87,6 +90,8 @@ console.log(analyze(input));
   }
   return stepsCount;
 }
+ ```
+
 
 ### MEDIUM
 
@@ -130,6 +135,8 @@ console.log(analyze(input));
 
    - NOTE: Please note the reversal operation in the second example due to the presence of 10000
 
+
+ ```js
 function findSpecialValues(matrix) {
   const specialValues = [];
 
@@ -162,6 +169,8 @@ function findSpecialValues(matrix) {
 
   return specialValues;
 }
+
+ ```
 
 
 ### HARD
