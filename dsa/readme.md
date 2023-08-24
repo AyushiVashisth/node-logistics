@@ -1,6 +1,6 @@
 Ensure you read the following instructions carefully:
 
-- Choose 2 from easy, 1 from the medium, and 1 from hard and solve a total of 4 questions from the following
+- Choose 2 from easy, 1 from medium, and 1 from hard and solve a total of 4 questions from the following
 - Solve the following problems with Javascript only.
 
 ### EASY
@@ -46,11 +46,11 @@ console.log(analyze(input));
 2. Shorten me!
 
    - Implement 2 functions, one that shortens a string of values by replacing consecutive data elements with just one data value and count of the consecutive values.
-   - For Example, we can shorten the characters “AAAAAAAAAAABWWWWWWWWWWWBB” with “11AB11W2B”
+   - For Example, we can shorten the character “AAAAAAAAAAABWWWWWWWWWWWBB” with “11AB11W2B”
    - The other function should take the shortened string and give back the original value
    - For example, we take the above-shortened characters “11AB11W2B” and get back “AAAAAAAAAAABWWWWWWWWWWWBB”
 
-   - For simplicity, you can assume that the unencoded string will only contain the letters A through Z (either lower or upper case) and whitespace. This way data to be encoded will never contain any numbers and numbers inside data to be decoded always represent the count for the following character.
+   - For simplicity, you can assume that the unencoded string will only contain the letters A through Z (either lower or upper case) and whitespace. This way data to be encoded will never contain any numbers and the numbers inside data to be decoded always represent the count for the following character.
 
 3. How many trails to 1?
 
@@ -98,7 +98,7 @@ console.log(analyze(input));
 1. Greater than and less than in a matrix
 
    - Detect values in a matrix that is greater than or equal to every element in its row and less than or equal to every element in its column.
-   - So say you have a matrix-like so:
+   - So say you have a matrix-like:
 
    ```js
        1  2  3
@@ -196,6 +196,19 @@ function findSpecialValues(matrix) {
    Explanation:
    According to the pattern, fish numbers 1, 7, 11, 13, 17, 19, and 23 escape without getting hit by either of the 4 people.
    ```
+ ```js
+   function countHitFishes(k, l, m, n, total) {
+  let count = 0;
+
+  for (let i = 1; i <= total; i++) {
+    if (i % k === 0 || i % l === 0 || i % m === 0 || i % n === 0) {
+      count++;
+    }
+  }
+
+  return count;
+}
+ ```
 
 2. n-Chai
 
